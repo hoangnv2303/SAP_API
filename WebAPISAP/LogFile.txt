@@ -1,0 +1,57 @@
+11/6/2020 2:47 PM: DownloadDeliverySale-SAP.Middleware.Connector.RfcCommunicationException: Input plant not exist!
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn)
+   at SAP.Middleware.Connector.RfcFunction.Invoke(RfcDestination destination)
+   at WebAPISAP.Common.SAPHelper.DownloadDeliverySale(String plant, DateTime firstDate, DateTime lastDate) in C:\KissPro\Fushan Project\10.CO Tool\code\SAP_API\WebAPISAP\Common\SAPHelper.cs:line 285
+11/6/2020 2:51 PM: DownloadDeliverySale-SAP.Middleware.Connector.RfcCommunicationException: Input plant not exist!
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn)
+   at SAP.Middleware.Connector.RfcFunction.Invoke(RfcDestination destination)
+   at WebAPISAP.Common.SAPHelper.DownloadDeliverySale(String plant, DateTime firstDate, DateTime lastDate) in C:\KissPro\Fushan Project\10.CO Tool\code\SAP_API\WebAPISAP\Common\SAPHelper.cs:line 285
+11/6/2020 2:54 PM: DownloadDeliverySale-SAP.Middleware.Connector.RfcCommunicationException: Input plant not exist!
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn)
+   at SAP.Middleware.Connector.RfcFunction.Invoke(RfcDestination destination)
+   at WebAPISAP.Common.SAPHelper.DownloadDeliverySale(String plant, DateTime firstDate, DateTime lastDate) in C:\KissPro\Fushan Project\10.CO Tool\code\SAP_API\WebAPISAP\Common\SAPHelper.cs:line 285
+11/6/2020 2:57 PM: DownloadDeliverySale-SAP.Middleware.Connector.RfcCommunicationException: Input plant not exist!
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcFunction.RfcDeserialize(RfcConnection conn, IRfcIOStream stream)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn, IRfcIOStream stream, RFCID rid)
+   at SAP.Middleware.Connector.RfcFunction.RfcCallReceive(RfcConnection conn)
+   at SAP.Middleware.Connector.RfcFunction.Invoke(RfcDestination destination)
+   at WebAPISAP.Common.SAPHelper.DownloadDeliverySale(String plant, DateTime firstDate, DateTime lastDate) in C:\KissPro\Fushan Project\10.CO Tool\code\SAP_API\WebAPISAP\Common\SAPHelper.cs:line 285
+12/10/2020 3:59 PM: === Get List TO SAP ====-Start
+12/10/2020 4:01 PM: === Get List TO SAP ====-Start
+12/10/2020 4:01 PM: ===-Connect Ok
+12/10/2020 4:01 PM: === Get List TO SAP ====-Done
+12/10/2020 4:01 PM: === Total Record: -1

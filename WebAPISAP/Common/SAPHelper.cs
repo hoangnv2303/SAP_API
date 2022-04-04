@@ -1,6 +1,7 @@
 ﻿using SAP.Middleware.Connector;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -13,8 +14,7 @@ namespace WebAPISAP.Common
 
         public SAPHelper()
         {
-            //_SAPConnectionString = @"MSHOST=10.134.92.27 R3NAME=LH1 GROUP=SPACE CLIENT=802 USER=RFCSHARE02 PASSWD=it0215 LANG=EN";
-            _SAPConnectionString = "MSHOST=10.134.28.98 R3NAME=LH1 GROUP=SPACE CLIENT=802 USER=RFCSHARE02 PASSWD=it0215 LANG=EN";
+            _SAPConnectionString = ConfigurationManager.AppSettings["SAPConnectionString"];
         }
 
         public string ConfirmTO(DataVM entity, string confirm)
@@ -81,6 +81,7 @@ namespace WebAPISAP.Common
                 //rfcPar.Add(RfcConfigParameters.RepositoryConnectionIdleTimeout, "1");
                 //rfcPar.Add(RfcConfigParameters.ConnectionIdleTimeout, "1");
                 //rfcPar.Add(RfcConfigParameters.PeakConnectionsLimit, "1000");
+                WriteLogs.Write("===", "Connect Ok");
                 return rfcPar;
             }
             catch (RfcCommunicationException ex)
@@ -203,7 +204,7 @@ namespace WebAPISAP.Common
                 RfcDestination rfcDest = RfcDestinationManager.GetDestination(rfcParam);
                 RfcRepository rfcRep = rfcDest.Repository;
                 IRfcFunction rfcFun = rfcRep.CreateFunction("ZRFC_CS_BOM_EXPL_0003");//SAP RFC
-                rfcFun.SetValue("WERKS", "FI20");
+                rfcFun.SetValue("WERKS", plant);
                 rfcFun.SetValue("DATUV", DateTime.Now.ToString("yyyyMMdd"));
                 rfcFun.SetValue("MEHRS", "X");
                 rfcFun.SetValue("MDMPS", "");
@@ -213,7 +214,7 @@ namespace WebAPISAP.Common
                 IRfcTable rtSource1 = rfcFun.GetTable("MATNR_IN");
                 rtSource1.Append();
 
-                rtSource1.SetValue("MATNR", "16KIGLW1A13");
+                rtSource1.SetValue("MATNR", parentMaterial); // 16KIGLW1A13
 
                 rfcFun.Invoke(rfcDest);
                 rtSourceOuput = rfcFun.GetTable("BOM_INFO");
@@ -250,6 +251,7 @@ namespace WebAPISAP.Common
                 RfcConfigParameters rfcParam = Connector3SapRfcConnGroup(_SAPConnectionString);
                 RfcDestination rfcDest = RfcDestinationManager.GetDestination(rfcParam);
                 RfcRepository rfcRep = rfcDest.Repository;
+
                 IRfcFunction rfcFun = rfcRep.CreateFunction("ZRFC_SD_ZPSD01");//SAP RFC
                 rfcFun.SetValue("ZCCS0", "X");
                 rfcFun.SetValue("P_HMD", "X");
